@@ -4,12 +4,12 @@
 
 var axios = require('axios');
 
-var id = "";
-var sec = "";
-var param = "?client_id=" + id + "&client_secret=" + sec;
-
 var getUserInfo = function (username) {
-  return axios.get('https://api.github.com/users/' + username + param)
+  return axios.get('https://api.github.com/users/' + username, {
+    headers: {
+      Authorization: "token f7608d5a2915878ddbaf64fcf584816a513126cb"
+    }
+  });
 };
 
 var helpers = {
