@@ -12,11 +12,11 @@ describe('Test Home Component', function () {
     home = shallow(<Home/>);
   });
 
-  it('should render', function() {
+  test('should render', function() {
     expect(home.exists());
   });
 
-  it('should have 3 child elements', function() {
+  test('should have 3 child elements', function() {
     expect(home.find('div').children().length).toEqual(3);
   });
 });

@@ -9,7 +9,7 @@ var helpers = {
     return axios
       .get('https://api.github.com/users/' + username, {
         headers: {
-          Authorization: "token f17427dbfd0c045a6b3de277a5fd791c8bf78392"
+          Authorization: "token INSERT_TOKEN"
         }
       })
       .then(function (info) {

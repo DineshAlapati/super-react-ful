@@ -16,11 +16,11 @@ describe('Test Prompt Component', function () {
     prompt = shallow(<Prompt onUpdateUser={onUpdateMock} onSubmitUser={onSubmitMock} username={mockUsername}/>);
   });
 
-  it('should render', function () {
+  test('should render', function () {
     expect(prompt.exists());
   });
 
-  it('should have h1 property defined', function () {
+  test('should have h1 property defined', function () {
     expect(prompt.find('h1').text()).toEqual("READY?");
   });
 });

@@ -7,7 +7,7 @@ var shallow = enzyme.shallow;
 var Main = require('./Main');
 
 describe('Test Main Component', function () {
-  it('should render', function() {
+  test('should render', function() {
     var main = shallow(<Main/>);
     expect(main.exists());
   });
