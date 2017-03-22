@@ -4,24 +4,16 @@
 
 var axios = require('axios');
 
-var getUserInfo = function (username) {
-  return axios.get('https://api.github.com/users/' + username, {
-    headers: {
-      Authorization: "token f7608d5a2915878ddbaf64fcf584816a513126cb"
-    }
-  });
-};
-
 var helpers = {
-  getPlayersInfo: function (players) {
+  getUserInfo: function (username) {
     return axios
-      .all(players.map(function (username) {
-        return getUserInfo(username);
-      }))
+      .get('https://api.github.com/users/' + username, {
+        headers: {
+          Authorization: "token f17427dbfd0c045a6b3de277a5fd791c8bf78392"
+        }
+      })
       .then(function (info) {
-        return info.map(function (user) {
-          return user.data;
-        });
+        return info.data;
       })
       .catch(function (err) {
         console.warn('Error in getPlayersInfo: ', err);

@@ -9,7 +9,7 @@ var transparentBg = require('../styles/index').transparentBg;
 var Prompt = function (props) {
   return (
     <div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
-      <h1>{props.header}</h1>
+      <h1>READY?</h1>
       <div className="col-sm-12">
         <form onSubmit={props.onSubmitUser}>
           <div className="form-group">
@@ -33,7 +33,6 @@ var Prompt = function (props) {
   );
 };
 Prompt.propTypes = {
-  header: PropTypes.string.isRequired,
   onUpdateUser: PropTypes.func.isRequired,
   onSubmitUser: PropTypes.func.isRequired,
   username: PropTypes.string.isRequired
