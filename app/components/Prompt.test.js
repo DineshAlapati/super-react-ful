@@ -16,6 +16,11 @@ describe('Test Prompt Component', function () {
     prompt = shallow(<Prompt onUpdateUser={onUpdateMock} onSubmitUser={onSubmitMock} username={mockUsername}/>);
   });
 
+  afterEach(function () {
+    onUpdateMock.mockClear();
+    onSubmitMock.mockClear();
+  });
+
   test('should render', function () {
     expect(prompt.exists());
   });
