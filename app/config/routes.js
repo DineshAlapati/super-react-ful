@@ -11,6 +11,7 @@ var Main = require('../components/Main');
 var Home = require('../components/Home');
 var PromptContainer = require('../containers/PromptContainer');
 var UserInfoContainer = require('../containers/UserInfoContainer');
+var GiphyContainer = require('../containers/GiphyContainer');
 
 var routes = (
   <Router history={hashHistory}>
@@ -18,6 +19,7 @@ var routes = (
       <IndexRoute component={Home}/>
       <Route path="/prompt" component={PromptContainer}/>
       <Route path="/userInfo" component={UserInfoContainer}/>
+      <Route path="/giphy" component={GiphyContainer}/>
     </Route>
   </Router>
 );
