@@ -17,6 +17,6 @@ describe('Test Giphy component', function () {
   });
 
   test('should get H1 text', function () {
-    expect(giphy.find('h1').text()).toEqual("TELUS Instasearch");
+    expect(giphy.find('h1').text()).toEqual("Instasearch");
   })
 });
