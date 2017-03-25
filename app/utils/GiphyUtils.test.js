@@ -9,18 +9,16 @@ var Promise = require('promise');
 describe.only('Giphy utils test', function () {
   var getMock;
   var mockData = {
-    data: [
-      {
-        images: {
-          fixed_height: "mock_url1"
+    data: {
+      data: [
+        {
+          images: {fixed_height: "mock_url1"}
+        },
+        {
+          images: {fixed_height: "mock_url2"}
         }
-      },
-      {
-        images: {
-          fixed_height: "mock_url2"
-        }
-      }
-    ]
+      ]
+    }
   };
 
   beforeEach(function () {

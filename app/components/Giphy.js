@@ -7,7 +7,7 @@ var GiphyComponent = React.createClass({
   render: function () {
     return (
       <div>
-        <div>TELUS Instasearch</div>
+        <h1>TELUS Instasearch</h1>
         <img src={this.props.imageUrl}/>
       </div>
     );
